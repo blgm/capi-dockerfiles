@@ -13,7 +13,7 @@ RUN \
   wget -qO- https://github.com/postmodern/ruby-install/archive/v0.8.3.tar.gz | tar -C /tmp -xzvf - && \
   (cd /tmp/ruby-install-0.8.3 && make install) && \
   rm -rf /tmp/ruby-install-0.8.3 && \
-  ruby-install ruby
+  ruby-install ruby --system
 
 # the Google CPI Go blob is dynamically linked against glibc
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
